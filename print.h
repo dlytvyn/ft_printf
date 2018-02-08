@@ -13,8 +13,13 @@
 #ifndef PRINT_H
 #define PRINT_H
 
-# define ON	 1
-# define OFF 0
+#define red     "\x1b[31m"
+#define green   "\x1b[32m"
+#define yellow  "\x1b[33m"
+#define blue    "\x1b[34m"
+#define magenta "\x1b[35m"
+#define cyan    "\x1b[36m"
+#define reset   "\x1b[0m"
 
 
 # include <stdarg.h>
@@ -86,6 +91,8 @@ typedef struct			s_lst
 	t_precision		*precision;
 	t_length		*length;
 	t_specifier		*specifier;
+    char            *color;
+    int             eoc;
 	char			*text;
 	char 			*wrong;
 }						t_lst;
@@ -119,4 +126,6 @@ int     	length_c(wchar_t ar);
 int     	length_s_one(wchar_t *ar);
 int     	ulen_lim(int num, wchar_t *ar);
 int     	ft_len(char *s);
+const char    *get_color(const char *form, t_lst *run);
+
 #endif

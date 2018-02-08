@@ -130,11 +130,37 @@ int		ft_get_specifier(const char *form, t_specifier *run)
 		return (1);
 }
 
+const char    *get_color(const char *form, t_lst *run)
+{
+    int count;
+
+    count = 0;
+    if (*form == '{')
+    {
+        form++;
+        !ft_strncmp(form, "red}", 4) ? run->color = ft_strdup("red") : count++;
+        !ft_strncmp(form, "green}", 6) ? run->color = ft_strdup("green") : count++;
+        !ft_strncmp(form, "yellow}", 7) ? run->color = ft_strdup("yellow") : count++;
+        !ft_strncmp(form, "blue}", 5) ? run->color = ft_strdup("blue") : count++;
+        !ft_strncmp(form, "magenta}", 8) ? run->color = ft_strdup("magenta") : count++;
+        !ft_strncmp(form, "cyan}", 5) ? run->color = ft_strdup("cyan") : count++;
+        !ft_strncmp(form, "red}", 4) ? run->color = ft_strdup("red") : count++;
+        (!ft_strncmp(form, "reset}", 6)) ? run->eoc = 1 : count++;
+        if (count != 8)
+        {
+            while (*form != '}')
+                form++;
+        }
+        form++;
+    }
+    return (form);
+}
+
 const char	*ft_wrong(const char *form, t_lst *run)
 {
 	char	*comp;
 
-	comp = ft_strdup("sSpdDiouUxXcC%b-+ #0*.123456789lLhjz");
+	comp = ft_strdup("sSpdDiouUxXcC%b-+ #0*.123456789lLhjz{}");
 	if (ft_strchr(comp, *form) == 0)
 	{
         run->wrong = ft_realloc(run->wrong, ft_strlen(run->wrong) + 1);
