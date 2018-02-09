@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="finish"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="finish">
+				<Option output="/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/finish" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 finish"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="finish/fast">
+				<Option output="/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/finish" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 finish/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dlytvyn/ft_printf/try/finish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/colors.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_al.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_atoi_n.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_char_type.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_clear.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_itoa_base.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_len.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_newlist.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_pointer.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_printf.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_puttext.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_realloc.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/ft_realloc_cat.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/get_format.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_atoi.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_bzero.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_isalnum.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_isalpha.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_isascii.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_isdigit.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_isprint.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_itoa.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_lstadd.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_lstdel.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_lstdelone.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_lstiter.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_lstmap.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_lstnew.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_memalloc.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_memccpy.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_memchr.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_memcmp.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_memcpy.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_memdel.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_memmove.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_memset.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_putchar.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_putchar_fd.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_putendl.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_putendl_fd.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_putnbr.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_putnbr_fd.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_putstr.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_putstr_fd.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strcat.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strchr.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strclr.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strcmp.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strcpy.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strdel.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strdup.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strequ.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_striter.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_striteri.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strjoin.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strlcat.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strlen.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strmap.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strmapi.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strncat.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strncmp.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strncpy.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strnequ.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strnew.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strnstr.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strrchr.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strsplit.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strstr.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strsub.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_strtrim.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_tolower.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/ft_toupper.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/libft/libft.h">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/main.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/new_format.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/parse.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/print.h">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/print_CS.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/search_base.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/type_of_data.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/unicode.c">
+			<Option target="finish"/>
+		</Unit>
+		<Unit filename="/Users/dlytvyn/ft_printf/try/finish/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
