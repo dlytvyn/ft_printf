@@ -41,8 +41,6 @@ const char	*ft_get_width(const char *form, t_width *run, va_list args, t_flags *
 			form++;
 		form--;
 	}
-	else if (*form == '*')
-		run->star = 1;
 	return (form);
 }
 
@@ -67,8 +65,6 @@ const char	*ft_get_precision(const char *form, t_precision *run, va_list args)
 			while (*form >= '0' && *form <= '9')
 				form++;
 		}
-		else if (*form == '*')
-			run->dot_star = 1;
 		form--;
 	}
 	return (form);
@@ -144,8 +140,10 @@ const char	*get_color(const char *form, t_color *run)
 		ft_strncmp(form, "blue}", 5) == 0 ? run->blu = 1 : count++;
 		ft_strncmp(form, "magenta}", 8) == 0? run->mag = 1 : count++;
 		ft_strncmp(form, "cyan}", 5) == 0 ? run->cya = 1 : count++;
+		ft_strncmp(form, "white}", 6) == 0 ? run->whi = 1 : count++;
 		ft_strncmp(form, "reset}", 6) == 0 ? run->rese = 1 : count++;
-		if (count != 7)
+
+		if (count != 8)
 		{
 			while (*form != '}')
 				form++;

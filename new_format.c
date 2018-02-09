@@ -24,7 +24,6 @@ t_flags		*zero_to_flags(t_flags *run)
 
 t_width		*zero_to_width(t_width *run)
 {	run->number = 0;
-	run->star = 0;
 	return (run);
 }
 
@@ -33,7 +32,6 @@ t_precision	*zero_to_precision(t_precision *run)
 	run->dot_number = -1;
 	run->fl = 0;
 	run->yes = 0;
-	run->dot_star = 0;
 	return (run);
 }
 
@@ -58,6 +56,7 @@ t_color     *zero_to_color(t_color *run)
     run->re = 0;
     run->rese = 0;
     run->yel = 0;
+	run->whi = 0;
     return (run);
 }
 
