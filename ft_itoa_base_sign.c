@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_itoa_base_sign.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlytvyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/09 12:57:16 by dlytvyn           #+#    #+#             */
-/*   Updated: 2018/02/09 16:46:41 by dlytvyn          ###   ########.fr       */
+/*   Created: 2018/02/09 17:05:13 by dlytvyn           #+#    #+#             */
+/*   Updated: 2018/02/09 17:05:14 by dlytvyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "print.h"
 
-void	*ft_realloc(void *array, size_t size)
+char		*ft_itoa_base_pt(ssize_t n)
 {
-	char	*res;
+	size_t			num;
+	char			*res;
+	int				size;
+	int				add;
 
+	num = n;
+	size = numsize(num);
 	if (!(res = (char*)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
-	if (array)
+	res[size--] = '\0';
+	if ((add = is_neg(num)) == 1)
+		num *= (-1);
+	while (size >= 0)
 	{
-		ft_bzero(res, size + 1);
-		ft_strcpy(res, array);
-		free(array);
+		if (add == 1 && size == 0)
+			res[size--] = '-';
+		res[size--] = num % 10 + '0';
+		num = num / 10;
 	}
 	return (res);
 }

@@ -12,7 +12,7 @@
 
 #include "print.h"
 
-const char	*ft_get_flags(const char *form, t_flags *run)
+char	*ft_get_flags(char *form, t_flags *run)
 {
 	(*form == '-') ? run->minus = 1 : 0;
 	(*form == '+') ? run->plus = 1 : 0;
@@ -22,7 +22,7 @@ const char	*ft_get_flags(const char *form, t_flags *run)
 	return (form);
 }
 
-const char	*ft_get_width(const char *form, t_width *run, va_list args, t_flags *f)
+char	*ft_gt_wd(char *form, t_width *run, va_list args, t_flags *f)
 {
 	if (*form == '*')
 	{
@@ -44,7 +44,7 @@ const char	*ft_get_width(const char *form, t_width *run, va_list args, t_flags *
 	return (form);
 }
 
-const char	*ft_get_precision(const char *form, t_precision *run, va_list args)
+char	*ft_get_precision(char *form, t_pr *run, va_list args)
 {
 	if (*form == '.')
 	{
@@ -70,7 +70,7 @@ const char	*ft_get_precision(const char *form, t_precision *run, va_list args)
 	return (form);
 }
 
-const char	*ft_get_length(const char *form, t_length *run)
+char	*ft_get_length(char *form, t_length *run)
 {
 	if (*form == 'l')
 	{
@@ -83,7 +83,7 @@ const char	*ft_get_length(const char *form, t_length *run)
 		else
 			run->l = 1;
 	}
-	(*form == 'L') ? run->L = 1 : 0;
+	(*form == 'L') ? run->cl = 1 : 0;
 	if (*form == 'h')
 	{
 		if (*(form + 1) == 'h')
@@ -99,25 +99,25 @@ const char	*ft_get_length(const char *form, t_length *run)
 	return (form);
 }
 
-int			ft_get_specifier(const char *form, t_specifier *run)
+int		ft_get_specifier(char *form, t_sp *run)
 {
 	int count;
 
 	count = 0;
 	(*form == 's') ? run->s = 1 : count++;
-	(*form == 'S') ? run->S = 1 : count++;
+	(*form == 'S') ? run->cs = 1 : count++;
 	(*form == 'p') ? run->p = 1 : count++;
 	(*form == 'd') ? run->d = 1 : count++;
-	(*form == 'D') ? run->D = 1 : count++;
+	(*form == 'D') ? run->cd = 1 : count++;
 	(*form == 'i') ? run->i = 1 : count++;
 	(*form == 'o') ? run->o = 1 : count++;
-	(*form == 'O') ? run->O = 1 : count++;
+	(*form == 'O') ? run->co = 1 : count++;
 	(*form == 'u') ? run->u = 1 : count++;
-	(*form == 'U') ? run->U = 1 : count++;
+	(*form == 'U') ? run->cu = 1 : count++;
 	(*form == 'x') ? run->x = 1 : count++;
-	(*form == 'X') ? run->X = 1 : count++;
+	(*form == 'X') ? run->cx = 1 : count++;
 	(*form == 'c') ? run->c = 1 : count++;
-	(*form == 'C') ? run->C = 1 : count++;
+	(*form == 'C') ? run->cc = 1 : count++;
 	(*form == 'b') ? run->b = 1 : count++;
 	(*form == '%') ? run->proc = 1 : count++;
 	if (count == 16)
@@ -125,50 +125,3 @@ int			ft_get_specifier(const char *form, t_specifier *run)
 	else
 		return (1);
 }
-
-const char	*get_color(const char *form, t_color *run)
-{
-	int count;
-
-	count = 0;
-	if (*form == '{')
-	{
-		form++;
-		ft_strncmp(form, "red}", 4) == 0 ? run->re = 1 : count++;
-		ft_strncmp(form, "green}", 6) == 0 ? run->gre = 1 : count++;
-		ft_strncmp(form, "yellow}", 7) == 0 ? run->yel = 1 : count++;
-		ft_strncmp(form, "blue}", 5) == 0 ? run->blu = 1 : count++;
-		ft_strncmp(form, "magenta}", 8) == 0? run->mag = 1 : count++;
-		ft_strncmp(form, "cyan}", 5) == 0 ? run->cya = 1 : count++;
-		ft_strncmp(form, "white}", 6) == 0 ? run->whi = 1 : count++;
-		ft_strncmp(form, "reset}", 6) == 0 ? run->rese = 1 : count++;
-
-		if (count != 8)
-		{
-			while (*form != '}')
-				form++;
-		}
-		(*form == '}') ? form++ : form--;
-	}
-	return (form);
-}
-
-const char	*ft_wrong(const char *form, t_lst *run)
-{
-	char	*comp;
-
-	comp = ft_strdup("sSpdDiouUxXcC%b-+ #0*.123456789lLhjz{}");
-	if (*form == '}')
-    {
-        run->wrong = ft_realloc(run->wrong, ft_strlen(run->wrong) + 1);
-        run->wrong = ft_strncat(run->wrong, form, 1);
-    }
-    else if (ft_strchr(comp, *form) == 0)
-    {
-        run->wrong = ft_realloc(run->wrong, ft_strlen(run->wrong) + 1);
-        run->wrong = ft_strncat(run->wrong, form, 1);
-    }
-	ft_strdel(&comp);
-	return (form);
-}
-

@@ -12,8 +12,7 @@
 
 #include "print.h"
 
-
-static int	is_neg(ssize_t n)
+int			is_neg(ssize_t n)
 {
 	if (n < 0)
 		return (1);
@@ -55,7 +54,7 @@ int			numsize_u(size_t n, int base)
 	return (counter);
 }
 
-int			help(t_specifier *spec)
+int			help(t_sp *spec)
 {
 	if (spec->x || spec->p)
 		return ('a' - 10);
@@ -63,7 +62,7 @@ int			help(t_specifier *spec)
 		return ('A' - 10);
 }
 
-char		*ft_itoa_base(size_t n, int base, t_specifier *spec)
+char		*ft_itoa_base(size_t n, int base, t_sp *spec)
 {
 	size_t			num;
 	char			*res;
@@ -81,28 +80,3 @@ char		*ft_itoa_base(size_t n, int base, t_specifier *spec)
 	}
 	return (res);
 }
-
-char		*ft_itoa_base_pt(ssize_t n)
-{
-	size_t			num;
-	char			*res;
-	int				size;
-	int				add;
-
-	num = n;
-	size = numsize(num);
-	if (!(res = (char*)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	res[size--] = '\0';
-	if ((add = is_neg(num)) == 1)
-		num *= (-1);
-	while (size >= 0)
-	{
-		if (add == 1 && size == 0)
-			res[size--] = '-';
-		res[size--] = num % 10 +  '0';
-		num = num / 10;
-	}
-	return (res);
-}
-

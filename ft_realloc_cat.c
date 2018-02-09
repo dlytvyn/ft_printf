@@ -15,7 +15,7 @@
 char	*ft_realloc_cat(char *array, char *source)
 {
 	char	*res;
-	int 	size;
+	int		size;
 
 	res = NULL;
 	size = ft_len(array) + ft_len(source);
