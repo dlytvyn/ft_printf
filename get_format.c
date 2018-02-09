@@ -6,7 +6,7 @@
 /*   By: dlytvyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 12:26:14 by dlytvyn           #+#    #+#             */
-/*   Updated: 2018/01/11 12:26:15 by dlytvyn          ###   ########.fr       */
+/*   Updated: 2018/02/09 11:32:17 by dlytvyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,22 @@ const char	*ft_get_flags(const char *form, t_flags *run)
 
 const char	*ft_get_width(const char *form, t_width *run, va_list args, t_flags *f)
 {
-    if (*form == '*')
-    {
-        run->number = va_arg(args, int);
-        if (run->number < 0)
-        {
-            run->number = -run->number;
-            f->minus = 1;
-        }
-    }
+	if (*form == '*')
+	{
+		run->number = va_arg(args, int);
+		if (run->number < 0)
+		{
+			run->number = -run->number;
+			f->minus = 1;
+		}
+	}
 	if (*form >= '1' && *form <= '9')
 	{
 		if (*form >= '0' && *form <= '9')
 			run->number = ft_atoi(form);
-        while (*form >= '0' && *form <= '9')
-            form++;
-        form--;
+		while (*form >= '0' && *form <= '9')
+			form++;
+		form--;
 	}
 	else if (*form == '*')
 		run->star = 1;
@@ -50,26 +50,26 @@ const char	*ft_get_precision(const char *form, t_precision *run, va_list args)
 {
 	if (*form == '.')
 	{
-        run->yes = 0;
+		run->yes = 0;
 		form++;
 		run->fl = 1;
-        run->dot_number = 0;
-        if (*form == '*')
-        {
-            run->dot_number = va_arg(args, int);
-            run->yes = (run->dot_number != 0) ? 1 : 0;
-            form++;
-        }
-        if (*form >= '0' && *form <= '9')
+		run->dot_number = 0;
+		if (*form == '*')
 		{
-            run->dot_number = ft_atoi(form);
-            run->yes = (run->dot_number != 0) ? 1 : 0;
+			run->dot_number = va_arg(args, int);
+			run->yes = (run->dot_number != 0) ? 1 : 0;
+			form++;
+		}
+		if (*form >= '0' && *form <= '9')
+		{
+			run->dot_number = ft_atoi(form);
+			run->yes = (run->dot_number != 0) ? 1 : 0;
 			while (*form >= '0' && *form <= '9')
-                form++;
+				form++;
 		}
 		else if (*form == '*')
 			run->dot_star = 1;
-        form--;
+		form--;
 	}
 	return (form);
 }
@@ -78,7 +78,7 @@ const char	*ft_get_length(const char *form, t_length *run)
 {
 	if (*form == 'l')
 	{
-        run = zero_to_length(run);
+		run = zero_to_length(run);
 		if (*(form + 1) == 'l')
 		{
 			run->ll = 1;
@@ -103,7 +103,7 @@ const char	*ft_get_length(const char *form, t_length *run)
 	return (form);
 }
 
-int		ft_get_specifier(const char *form, t_specifier *run)
+int			ft_get_specifier(const char *form, t_specifier *run)
 {
 	int count;
 
@@ -122,7 +122,7 @@ int		ft_get_specifier(const char *form, t_specifier *run)
 	(*form == 'X') ? run->X = 1 : count++;
 	(*form == 'c') ? run->c = 1 : count++;
 	(*form == 'C') ? run->C = 1 : count++;
-    (*form == 'b') ? run->b = 1 : count++;
+	(*form == 'b') ? run->b = 1 : count++;
 	(*form == '%') ? run->proc = 1 : count++;
 	if (count == 16)
 		return (0);
@@ -130,30 +130,29 @@ int		ft_get_specifier(const char *form, t_specifier *run)
 		return (1);
 }
 
-const char    *get_color(const char *form, t_lst *run)
+const char	*get_color(const char *form, t_color *run)
 {
-    int count;
+	int count;
 
-    count = 0;
-    if (*form == '{')
-    {
-        form++;
-        !ft_strncmp(form, "red}", 4) ? run->color = ft_strdup("red") : count++;
-        !ft_strncmp(form, "green}", 6) ? run->color = ft_strdup("green") : count++;
-        !ft_strncmp(form, "yellow}", 7) ? run->color = ft_strdup("yellow") : count++;
-        !ft_strncmp(form, "blue}", 5) ? run->color = ft_strdup("blue") : count++;
-        !ft_strncmp(form, "magenta}", 8) ? run->color = ft_strdup("magenta") : count++;
-        !ft_strncmp(form, "cyan}", 5) ? run->color = ft_strdup("cyan") : count++;
-        !ft_strncmp(form, "red}", 4) ? run->color = ft_strdup("red") : count++;
-        (!ft_strncmp(form, "reset}", 6)) ? run->eoc = 1 : count++;
-        if (count != 8)
-        {
-            while (*form != '}')
-                form++;
-        }
-        form++;
-    }
-    return (form);
+	count = 0;
+	if (*form == '{')
+	{
+		form++;
+		ft_strncmp(form, "red}", 4) == 0 ? run->re = 1 : count++;
+		ft_strncmp(form, "green}", 6) == 0 ? run->gre = 1 : count++;
+		ft_strncmp(form, "yellow}", 7) == 0 ? run->yel = 1 : count++;
+		ft_strncmp(form, "blue}", 5) == 0 ? run->blu = 1 : count++;
+		ft_strncmp(form, "magenta}", 8) == 0? run->mag = 1 : count++;
+		ft_strncmp(form, "cyan}", 5) == 0 ? run->cya = 1 : count++;
+		ft_strncmp(form, "reset}", 6) == 0 ? run->rese = 1 : count++;
+		if (count != 7)
+		{
+			while (*form != '}')
+				form++;
+		}
+		(*form == '}') ? form++ : form--;
+	}
+	return (form);
 }
 
 const char	*ft_wrong(const char *form, t_lst *run)
@@ -161,11 +160,17 @@ const char	*ft_wrong(const char *form, t_lst *run)
 	char	*comp;
 
 	comp = ft_strdup("sSpdDiouUxXcC%b-+ #0*.123456789lLhjz{}");
-	if (ft_strchr(comp, *form) == 0)
-	{
+	if (*form == '}')
+    {
         run->wrong = ft_realloc(run->wrong, ft_strlen(run->wrong) + 1);
         run->wrong = ft_strncat(run->wrong, form, 1);
-	}
-    ft_strdel(&comp);
+    }
+    else if (ft_strchr(comp, *form) == 0)
+    {
+        run->wrong = ft_realloc(run->wrong, ft_strlen(run->wrong) + 1);
+        run->wrong = ft_strncat(run->wrong, form, 1);
+    }
+	ft_strdel(&comp);
 	return (form);
 }
+

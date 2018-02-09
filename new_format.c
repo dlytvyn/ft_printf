@@ -6,7 +6,7 @@
 /*   By: dlytvyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/10 11:41:42 by dlytvyn           #+#    #+#             */
-/*   Updated: 2018/01/10 11:41:44 by dlytvyn          ###   ########.fr       */
+/*   Updated: 2018/02/09 11:34:28 by dlytvyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ t_flags		*zero_to_flags(t_flags *run)
 }
 
 t_width		*zero_to_width(t_width *run)
-{
-	run->number = 0;
+{	run->number = 0;
 	run->star = 0;
 	return (run);
 }
@@ -33,7 +32,7 @@ t_precision	*zero_to_precision(t_precision *run)
 {
 	run->dot_number = -1;
 	run->fl = 0;
-    run->yes = 0;
+	run->yes = 0;
 	run->dot_star = 0;
 	return (run);
 }
@@ -50,6 +49,18 @@ t_length	*zero_to_length(t_length *run)
 	return (run);
 }
 
+t_color     *zero_to_color(t_color *run)
+{
+    run->blu = 0;
+    run->cya = 0;
+    run->gre = 0;
+    run->mag = 0;
+    run->re = 0;
+    run->rese = 0;
+    run->yel = 0;
+    return (run);
+}
+
 t_specifier	*zero_to_specifier(t_specifier *run)
 {
 	run->c = 0;
@@ -64,9 +75,10 @@ t_specifier	*zero_to_specifier(t_specifier *run)
 	run->s = 0;
 	run->S = 0;
 	run->u = 0;
-    run->U = 0;
-    run->x = 0;
-    run->X = 0;
-    run->b = 0;
+	run->U = 0;
+	run->x = 0;
+	run->X = 0;
+	run->b = 0;
 	return (run);
 }
+

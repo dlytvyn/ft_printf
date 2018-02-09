@@ -23,15 +23,15 @@ int     ft_len(char *s)
     return (i);
 }
 
-void    print_color(char *col, int eoc)
+void    print_color(t_color *col)
 {
-    ft_strcmp(col, "red") == 0 ? write(1, red, ft_len(red)) : 1;
-    !ft_strcmp(col, "green") ? write(1, green, ft_len(green)) : 1;
-    !ft_strcmp(col, "yellow") ? write(1, yellow, ft_len(yellow)) : 1;
-    !ft_strcmp(col, "blue") ? write(1, blue, ft_len(blue)) : 1;
-    !ft_strcmp(col, "magenta") ? write(1, magenta, ft_len(magenta)) : 1;
-    !ft_strcmp(col, "cyan") ? write(1, cyan, ft_len(cyan)) : 1;
-    eoc == 1 ? write(1, reset, ft_len(reset)) : 1;
+    col->re ? write(1, red, ft_len(red)) : 1;
+    col->gre ? write(1, green, ft_len(green)) : 1;
+    col->yel ? write(1, yellow, ft_len(yellow)) : 1;
+    col->blu ? write(1, blue, ft_len(blue)) : 1;
+    col->mag ? write(1, magenta, ft_len(magenta)) : 1;
+    col->cya ? write(1, cyan, ft_len(cyan)) : 1;
+    col->rese ? write(1, reset, ft_len(reset)) : 1;
 }
 
 void	*ft_realloc(void *array, size_t size)
@@ -90,13 +90,13 @@ t_lst	*ft_newlst(void)
     elem->precision = (t_precision*)malloc(sizeof(t_precision));
     elem->length = (t_length*)malloc(sizeof(t_length));
     elem->specifier = (t_specifier*)malloc(sizeof(t_specifier));
+    elem->color = (t_color*)malloc(sizeof(t_color));
     elem->flags = zero_to_flags(elem->flags);
     elem->width = zero_to_width(elem->width);
     elem->precision = zero_to_precision(elem->precision);
     elem->length = zero_to_length(elem->length);
     elem->specifier = zero_to_specifier(elem->specifier);
-    elem->color = ft_strdup("");
-    elem->eoc = 0;
+    elem->color = zero_to_color(elem->color);
     elem->text = ft_strdup("");
     elem->wrong = ft_strdup("");
     return (elem);
@@ -110,7 +110,7 @@ const char	*ft_format(const char *form, t_lst *run, va_list args)
     while (*form && *form != '%')
     {
         if (*form == '{')
-            form = get_color(form, run);
+            form = get_color(form, run->color);
         if (*form && *form != '%')
         {
             run->text = ft_realloc(run->text, ft_strlen(run->text) + 1);
@@ -524,7 +524,7 @@ int         ft_puttext_min(char *fl_ac, char *width, char *num, t_lst *run)
 
     len = 0;
     (fl_ac != NULL) ? write(1, fl_ac, ft_len(fl_ac)) : 1;
-    print_color(run->color, run->eoc);
+    print_color(run->color);
     if (num[0] != '\0')
     {
         len = ft_len(num);

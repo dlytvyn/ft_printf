@@ -64,6 +64,17 @@ typedef struct			s_length
 	int					z;
 }						t_length;
 
+typedef struct          s_color
+{
+    int                 re;
+    int                 gre;
+    int                 yel;
+    int                 blu;
+    int                 mag;
+    int                 cya;
+    int                 rese;
+}                       t_color;
+
 typedef struct			s_specifier
 {
 	int					s;
@@ -91,8 +102,7 @@ typedef struct			s_lst
 	t_precision		*precision;
 	t_length		*length;
 	t_specifier		*specifier;
-    char            *color;
-    int             eoc;
+    t_color         *color;
 	char			*text;
 	char 			*wrong;
 }						t_lst;
@@ -108,6 +118,9 @@ t_width		*zero_to_width(t_width *run);
 t_precision	*zero_to_precision(t_precision *run);
 t_length	*zero_to_length(t_length *run);
 t_specifier	*zero_to_specifier(t_specifier *run);
+t_color     *zero_to_color(t_color *run);
+
+const char	*get_color(const char *form, t_color *run);
 
 
 char		*ft_itoa_base(size_t num, int base, t_specifier *spec);
@@ -126,6 +139,5 @@ int     	length_c(wchar_t ar);
 int     	length_s_one(wchar_t *ar);
 int     	ulen_lim(int num, wchar_t *ar);
 int     	ft_len(char *s);
-const char    *get_color(const char *form, t_lst *run);
 
 #endif
